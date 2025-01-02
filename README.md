@@ -35,13 +35,18 @@ A Comparison Study of Statistical ML Model vs CNN Model vs Proposed (LSTM+CNN) M
     - librosa extracted features like - Pitch, Intensity, Frequency, Amplitude, MFCCs, Spectral - (Centroid, Bandwidth, Rolloff, Flux), Energy, ZCR, Tempo, Formants.
     - perselmouth extracted features like - Jitter and Shimmer [These valuses were null, they were removed]
 - Use GPT-4.0 to project emotions into `stress level` from 1 to 10. This stress level is the output (target)<br>
-`Emotion to Stress Level`
-- ![Emotion to Stress Level](images/emotion_to_stress.jpg)
 
-**Dataset with all Extracted Features**
-![Dataset with all extracted features](images/all_extracted_features.jpg)
-**Final Dataset for Training**
-![Final Dataset for Training](images/final_features_for_train.jpg)
+    **Emotion to Stress Level**
+
+    ![Emotion to Stress Level](images/emotion_to_stress.jpg)
+
+    **Dataset with all Extracted Features**
+
+    ![Dataset with all extracted features](images/all_extracted_features.jpg)
+
+    **Final Dataset for Training**
+
+    ![Final Dataset for Training](images/final_features_for_train.jpg)
 
 ### **Approach-1: Train Models on Feature Dataset**
 **Model Architectures:**
