@@ -15,14 +15,14 @@ A Comparison Study of Statistical ML Model vs CNN Model vs Proposed (LSTM+CNN) M
         - lstm is designed to handle sequential data, so it will ensure the sequential relationships over time. capturing temporal dependencies like - stress-related changes (e.g., in pitch, tone, or energy) are very crucial for stress level detection.
         - cnn can isolate local patterns and also very suitable to capture instantaneous features. (will be helpful because our audio files are (1-3) sec long).
         - lstm and cnn combination is flexible for multimodal extension where lstm will provide context that pure CNNs might miss and will create a base for incorporating modalities (e.g., physiological signals, text), making it easier to extend the model for future applications.
-    **Combination of Approaches:**
+- **Combination of Approaches:**
     - Train all the three models on Feature Dataset.
     - Train all the three models on Raw Audio Dataset.
     - Train all the three models on Combined Audio and Feature Dataset.
 ### **Dataset**
 ---
 #### **TESS (Tononto Emotional Speech Set) Dataset**
-- The primary dataset is collected from kaggle [dataset link](https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess)
+- The primary dataset is collected from Kaggle [[Dataset Link]](https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess)
 
 **Key Features:**
 - Includes recordings from two female native English speakers: aged 26 and 64 years.
@@ -34,10 +34,24 @@ A Comparison Study of Statistical ML Model vs CNN Model vs Proposed (LSTM+CNN) M
 - `librosa` and `parselmouth` both are python libraries used to extract features from audio file.
     - librosa extracted features like - Pitch, Intensity, Frequency, Amplitude, MFCCs, Spectral - (Centroid, Bandwidth, Rolloff, Flux), Energy, ZCR, Tempo, Formants.
     - perselmouth extracted features like - Jitter and Shimmer [These valuses were null, they were removed]
+- Use GPT-4.0 to project emotions into `stress level` from 1 to 10. This stress level is the output (target)<br>
+`Emotion to Stress Level`
+- ![Emotion to Stress Level](images/emotion_to_stress.jpg)
 
 **Dataset with all Extracted Features**
 ![Dataset with all extracted features](images/all_extracted_features.jpg)
 **Final Dataset for Training**
 ![Final Dataset for Training](images/final_features_for_train.jpg)
 
+### **Approach-1: Train Models on Feature Dataset**
+**Model Architectures:**
+- ML Model: SVM and Random Forest
+- CNN Model: (StressCNN)
+    - Input Layer: accept 1d signals as input
+    - Two Convolutional Layers: `Conv1d` layers with 32 and 64 filters respectively, a kernel size of 3, and padding of 1, followed by a ReLU activation function.
+    - Pooling Layers: Each convolutional layer is followed by a MaxPool1d layer with a kernel size of 2 to reduce the spatial dimensions.
+    - Fully Connected Layers: A Linear layer with 128 neurons, followed by a ReLU activation function.
+    - Droopout Layer: A dropout layer with a 0.5 rate to reduce overfitting.
+    - Output Layer: A Linear layer with 9 neurons (matching the number of classes).
+- Proposed Model: LSTM+CNN
 Comparison study of OpenSMILE+DT, Pretrained CNN and LSTM+CNN (proposed) on TESS dataset for research purpose
