@@ -1,5 +1,5 @@
 #### **TESS (Tononto Emotional Speech Set) Dataset**
-- The primary dataset is collected from kaggele [dataset link](https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess)
+- The primary dataset is collected from kaggle [dataset link](https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess)
 
 **Key Features:**
 - Includes recordings from two female native English speakers: aged 26 and 64 years.
@@ -12,5 +12,5 @@
 - `librosa` and `parselmouth` both are python libraries used to extract features from audio file.
     - librosa extracted features like - Pitch, Intensity, Frequency, Amplitude, MFCCs, Spectral - (Centroid, Bandwidth, Rolloff, Flux), Energy, ZCR, Tempo, Formants.
     - perselmouth extracted features like - Jitter and Shimmer [These valuses were null, they were removed]
-- ![Dataset with all extracted features](images/all_extracted_features.jpg)
-- ![Final Dataset for Training](images/final_features_for_train.jpg)
+![Dataset with all extracted features](images/all_extracted_features.jpg)
+![Final Dataset for Training](images/final_features_for_train.jpg)
