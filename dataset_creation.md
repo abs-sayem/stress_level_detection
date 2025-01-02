@@ -12,5 +12,8 @@
 - `librosa` and `parselmouth` both are python libraries used to extract features from audio file.
     - librosa extracted features like - Pitch, Intensity, Frequency, Amplitude, MFCCs, Spectral - (Centroid, Bandwidth, Rolloff, Flux), Energy, ZCR, Tempo, Formants.
     - perselmouth extracted features like - Jitter and Shimmer [These valuses were null, they were removed]
+
+**Dataset with all Extracted Features**
 ![Dataset with all extracted features](images/all_extracted_features.jpg)
+**Final Dataset for Training**
 ![Final Dataset for Training](images/final_features_for_train.jpg)
