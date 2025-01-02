@@ -49,14 +49,14 @@ A Comparison Study of Statistical ML Model vs CNN Model vs Proposed (LSTM+CNN) M
     ![Final Dataset for Training](images/final_features_for_train.jpg)
 
 ### **Approach-1: Train Models on Feature Dataset**
-**Model Architectures:**
-- ML Model: SVM and Random Forest
-- CNN Model: (StressCNN)
+- #### **ML Model:** SVM and Random Forest
+- #### **CNN Model:** (StressCNN)
     - Input Layer: accept 1d signals as input
     - Two Convolutional Layers: `Conv1d` layers with 32 and 64 filters respectively, a kernel size of 3, and padding of 1, followed by a ReLU activation function.
     - Pooling Layers: Each convolutional layer is followed by a MaxPool1d layer with a kernel size of 2 to reduce the spatial dimensions.
     - Fully Connected Layers: A Linear layer with 128 neurons, followed by a ReLU activation function.
     - Droopout Layer: A dropout layer with a 0.5 rate to reduce overfitting.
     - Output Layer: A Linear layer with 9 neurons (matching the number of classes).
-- Proposed Model: LSTM+CNN
+- #### **Proposed Model:** LSTM+CNN
+
 Comparison study of OpenSMILE+DT, Pretrained CNN and LSTM+CNN (proposed) on TESS dataset for research purpose
