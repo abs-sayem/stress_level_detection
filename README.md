@@ -1,10 +1,10 @@
-# **Stress Level Detection**
-A Comparison Study of Statistical ML Model vs CNN Model vs Proposed (LSTM+CNN) Model
----
+# **Stress Level Detection** <br> <span style="font-size: 14px;">A Comparison Study of Statistical ML Model vs CNN Model vs Proposed (LSTM+CNN) Model.</span>
+
 
 ### **Aim of this Study:**
 - Propose an optimal multi-modal deep learning approach for stress level detection.
 - Compare my proposed model with a well stablished CNN model and one of two Statistical (Traditional) ML models.
+
 ### **Approach of this Study:**
 - **A Suitable Dataset:** Tononto Emotional Speech Set (TESS) dataset includes almost all the common emotions of a human, emotionally rich and semantically neutral utterances and high audio quality data.
 - **Suitable Models to Train:**
@@ -19,9 +19,10 @@ A Comparison Study of Statistical ML Model vs CNN Model vs Proposed (LSTM+CNN) M
     - Train all the three models on Feature Dataset.
     - Train all the three models on Raw Audio Dataset.
     - Train all the three models on Combined Audio and Feature Dataset.
-### **Dataset**
----
-#### **TESS (Tononto Emotional Speech Set) Dataset**
+
+## **Dataset**
+
+### **TESS (Tononto Emotional Speech Set) Dataset**
 - The primary dataset is collected from Kaggle [[Dataset Link]](https://www.kaggle.com/datasets/ejlok1/toronto-emotional-speech-set-tess)
 
 **Key Features:**
@@ -29,26 +30,31 @@ A Comparison Study of Statistical ML Model vs CNN Model vs Proposed (LSTM+CNN) M
 - The dataset captures seven emotions: `Neutral`, `Angry`, `Happy`, `Sad`, `Disgust`, `Fear`, and `Pleasant Surprise`.
 - Each emotion is expressed using 200 target words, producing emotionally rich and semantically neutral utterances.
 - The recordings are provided in 16-bit WAV format with a sampling rate of 44.1 kHz, ensures high audio quality suitable for acoustic analysis.
-#### **Making of Feature Dataset**
+### **Making of Feature Dataset**
+- Essential Features for Stress Detection:
+    - Prosodic Features: Pitch, Energy / Intensity
+    - Spectral Features: Mel-Frequency Cepstral Coefficients (MFCCs), Spectral Centroid, Spectral Flux, Spectral Bandwidth, Spectral Roll-Off
+    - Voice Quality Features: Harmonics-to-Noise Ratio (HNR), Formants (F1, F2, F3)
+    - Temporal Features: Frequency, Speech Rate
+    - Derived Features: Chroma
 - For comparison with cnn and proposed (lstm+cnn) model a feature dataset is needed for traditional machile learning models. This dataset is used to train all the models for one of out three sections of comparison.
 - `librosa` and `parselmouth` both are python libraries used to extract features from audio file.
     - librosa extracted features like - Pitch, Intensity, Frequency, Amplitude, MFCCs, Spectral - (Centroid, Bandwidth, Rolloff, Flux), Energy, ZCR, Tempo, Formants.
     - perselmouth extracted features like - Jitter and Shimmer [These valuses were null, they were removed]
-- Use GPT-4.0 to project emotions into `stress level` from 1 to 10. This stress level is the output (target)<br>
-
-    **Emotion to Stress Level**
-
-    ![Emotion to Stress Level](images/emotion_to_stress.jpg)
-
+    
     **Dataset with all Extracted Features**
 
     ![Dataset with all extracted features](images/all_extracted_features.jpg)
 
-    **Final Dataset for Training**
+- Use GPT-4.0 to project emotions into `stress level` from 1 to 10. This stress level is the output (target) for the comparison study on only feature dataset.<br>
+
+    ![Emotion to Stress Level](images/emotion_to_stress.jpg)
+
+    **Final Feature Dataset**
 
     ![Final Dataset for Training](images/final_features_for_train.jpg)
 
-### **Approach-1: Train Models on Feature Dataset**
+## **Approach-1: Train Models on Feature Dataset**
 - #### **ML Model:** SVM and Random Forest
 - #### **CNN Model:** (StressCNN)
     - Input Layer: accept 1d signals as input
