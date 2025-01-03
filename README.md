@@ -1,5 +1,4 @@
-# **Stress Level Detection** <br> <span style="font-size: 14px;">A Comparison Study of Statistical ML Model vs CNN Model vs Proposed (LSTM+CNN) Model.</span>
-
+# **Stress Level Detection**<br> <span style="font-size: 14px;">A Comparison Study of Statistical ML Model vs CNN Model vs Proposed (LSTM+CNN) Model.</span>
 
 ### **Aim of this Study:**
 - Propose an optimal multi-modal deep learning approach for stress level detection.
