@@ -115,22 +115,22 @@
 - Since traditional ML models need feature data, we use `OpenSMILE` to extract features automatically and then train the models on these features.
 - OpenSMILE Process:
 
-![OpenSMILE Process](images/audio_ds/audio_opensmile_svc_dt.png)
-
+    ![OpenSMILE Process](images/audio_ds/audio_opensmile_svc_dt.png)
+    
     - Final Accuracy:
         - SVM           : 99%
         - Random Forest : 100%
     
     - Classification Reports:
 
-    ![Classification Report](images/audio_ds/svc_random_forest_cr.png)
+        ![Classification Report](images/audio_ds/svc_random_forest_cr.png)
 
     - Confussion Matrices:
 
-    ![Confussion Matrix](images/audio_ds/svc_random_forest_cm.png)
+        ![Confussion Matrix](images/audio_ds/svc_random_forest_cm.png)
 
 - #### **CNN Model:** (StressCNN)
-    - Final Accuracy: 75%
+    - Final Accuracy: 99%
 
     - Accuracy vs Loss Curve:
 
@@ -141,7 +141,7 @@
         ![Classification Report and Confussion Matrix](images/audio_ds/stresscnn_cr_cm.png)
 
 - #### **Proposed Model:** (LSTM+CNN)
-    - Final Accuracy: 77%
+    - Final Accuracy: 99%
 
     - Accuracy vs Loss Curve:
 
