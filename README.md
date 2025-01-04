@@ -56,6 +56,11 @@
 
 ## **Approach-1: Train Models on Feature Dataset**
 - #### **ML Model:** SVM and Random Forest
+    - Final Accuracy:
+        - SVM           : 64%
+        - Random Forest : 71%
+    - Classificaltion Report:
+    ![Classification Report](images/feature_ds/svm_random_forest_cr.PNG)
 - #### **CNN Model:** (StressCNN)
     - Input Layer: accept 1d signals as input
     - Two Convolutional Layers: `Conv1d` layers with 32 and 64 filters respectively, a kernel size of 3, and padding of 1, followed by a ReLU activation function.
@@ -63,6 +68,22 @@
     - Fully Connected Layers: A Linear layer with 128 neurons, followed by a ReLU activation function.
     - Droopout Layer: A dropout layer with a 0.5 rate to reduce overfitting.
     - Output Layer: A Linear layer with 9 neurons (matching the number of classes).
-- #### **Proposed Model:** LSTM+CNN
+
+        ![StressCNN Architecture](images/stress_cnn_architecture.PNG)
+
+- #### **Proposed Model:** (LSTM+CNN)
+    - Input Layer: Accepts 1D sequential data with a specified number of features (input_dim).
+    - LSTM Layer: A bidirectional LSTM with hidden_dim units, lstm_layers layers, capturing temporal dependencies in both directions.
+    - Convolutional Layer: A 1D Conv1d layer with hidden_dim * 2 input channels, cnn_channels filters, kernel size 3, padding 1, followed by a ReLU activation function.
+    - Global Average Pooling Layer: An adaptive average pooling layer that reduces feature maps to a fixed size.
+    - Fully Connected Layers: A Linear layer with 128 neurons, followed by a ReLU activation function.
+    - Dropout Layer: A dropout layer with a 0.5 rate to reduce overfitting.
+    - Output Layer: A Linear layer with num_classes neurons, producing the final output.
+
+        ![StressCNN Architecture](images/stress_cnn_architecture.PNG)
+
+*`These model architecture will be used for our all approaches.`*
+
+- ### **Findings:**
 
 Comparison study of OpenSMILE+DT, Pretrained CNN and LSTM+CNN (proposed) on TESS dataset for research purpose
