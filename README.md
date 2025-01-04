@@ -59,11 +59,11 @@
     - Final Accuracy:
         - SVM           : 64%
         - Random Forest : 71%
-    - Classification Report:
+    - Classification Reports:
 
     ![Classification Report](images/feature_ds/svm_random_forest_cr.PNG)
 
-    - Confussion Matrix:
+    - Confussion Matrices:
 
     ![Confussion Matrix](images/feature_ds/svm_random_forest_cm.png)
 
@@ -81,15 +81,11 @@
 
     - Accuracy vs Loss Curve:
 
-    ![Accuracy vs Loss Curve](images/feature_ds/stresscnn_loss_acc_curves.png)
+        ![Accuracy vs Loss Curve](images/feature_ds/stresscnn_loss_acc_curves.png)
 
-    - Classification Report:
+    - Classification Report and Confussion Matrix:
 
-    ![Classification Report](images/feature_ds/stresscnn_loss_cr.png)
-
-    - Confussion Matrix:
-
-    ![Confussion Matrix](images/feature_ds/stresscnn_loss_cm.png)
+        ![Classification Report](images/feature_ds/stresscnn_cm_cr.png)
 
 - #### **Proposed Model:** (LSTM+CNN)
     - Input Layer: Accepts 1D sequential data with a specified number of features (input_dim).
@@ -100,10 +96,57 @@
     - Dropout Layer: A dropout layer with a 0.5 rate to reduce overfitting.
     - Output Layer: A Linear layer with num_classes neurons, producing the final output.
 
-        ![StressCNN Architecture](images/stress_cnn_architecture.PNG)
+        ![LSTM_CNN Architecture](images/lstm_cnn_architecture.png)
+
+    - Final Accuracy: 77%
+
+    - Accuracy vs Loss Curve:
+
+        ![Accuracy vs Loss Curve](images/feature_ds/lstmcnn_loss_acc_curves.png)
+
+    - Classification Report and Confussion Matrix:
+
+        ![Classification Report and Confusion Matrix](images/feature_ds/lstmcnn_cm_cr.png)
 
 *`These model architectures will be used for our all approaches.`*
 
-- ### **Findings:**
+## **Approach-2: Train Models on Audio Dataset**
+- #### **ML Model:** SVM and Random Forest
+- Since traditional ML models need feature data, we use `OpenSMILE` to extract features automatically and then train the models on these features.
+- OpenSMILE Process:
 
-Comparison study of OpenSMILE+DT, Pretrained CNN and LSTM+CNN (proposed) on TESS dataset for research purpose
+![OpenSMILE Process](images/audio_ds/audio_opensmile_svc_dt.png)
+
+    - Final Accuracy:
+        - SVM           : 99%
+        - Random Forest : 100%
+    
+    - Classification Reports:
+
+    ![Classification Report](images/audio_ds/svc_random_forest_cr.png)
+
+    - Confussion Matrices:
+
+    ![Confussion Matrix](images/audio_ds/svc_random_forest_cm.png)
+
+- #### **CNN Model:** (StressCNN)
+    - Final Accuracy: 75%
+
+    - Accuracy vs Loss Curve:
+
+        ![Accuracy vs Loss Curve](images/audio_ds/stresscnn_loss_acuracy_curve.png)
+
+    - Classification Report and Confussion Matrix:
+
+        ![Classification Report and Confussion Matrix](images/audio_ds/stresscnn_cr_cm.png)
+
+- #### **Proposed Model:** (LSTM+CNN)
+    - Final Accuracy: 77%
+
+    - Accuracy vs Loss Curve:
+
+        ![Accuracy vs Loss Curve](images/audio_ds/lstmcnn_loss_acuracy_curve.png)
+
+    - Classification Report and Confussion Matrix:
+
+        ![Classification Report and Confussion Matrix](images/audio_ds/lstmcnn_cr_cm.png)
