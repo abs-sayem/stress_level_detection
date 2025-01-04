@@ -153,3 +153,37 @@
 
 ## **Approach-3: Train Models on Audio + Feature Dataset**
 - #### **ML Model:** SVM and Random Forest
+
+    - Final Accuracy:
+        - SVM           : 88%
+        - Random Forest : 100%
+    
+    - Classification Reports:
+
+        ![Classification Report](images/audio_feature_ds/svc_random_forest_cr.png)
+
+    - Confussion Matrices:
+
+        ![Confussion Matrix](images/audio_feature_ds/svc_random_forest_cm.png)
+
+- #### **CNN Model:** (StressCNN)
+    - Final Accuracy: xx%
+
+    - Accuracy vs Loss Curve:
+
+        ![Accuracy vs Loss Curve](images/audio_feature_ds/stresscnn_loss_accuracy_curve.png)
+
+    - Classification Report and Confussion Matrix:
+
+        ![Classification Report and Confussion Matrix](images/audio_feature_ds/stresscnn_cr_cm.png)
+
+- #### **Proposed Model:** (LSTM+CNN)
+    - Final Accuracy: xx%
+
+    - Accuracy vs Loss Curve:
+
+        ![Accuracy vs Loss Curve](images/audio_feature_ds/lstmcnn_loss_accuracy_curve.png)
+
+    - Classification Report and Confussion Matrix:
+
+        ![Classification Report and Confussion Matrix](images/audio_feature_ds/lstmcnn_cr_cm.png)
