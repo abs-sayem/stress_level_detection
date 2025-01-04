@@ -167,7 +167,7 @@
         ![Confussion Matrix](images/audio_feature_ds/svc_random_forest_cm.png)
 
 - #### **CNN Model:** (StressCNN)
-    - Final Accuracy: xx%
+    - Final Accuracy: 98%
 
     - Accuracy vs Loss Curve:
 
@@ -178,7 +178,7 @@
         ![Classification Report and Confussion Matrix](images/audio_feature_ds/stresscnn_cr_cm.png)
 
 - #### **Proposed Model:** (LSTM+CNN)
-    - Final Accuracy: xx%
+    - Final Accuracy: 98%
 
     - Accuracy vs Loss Curve:
 
