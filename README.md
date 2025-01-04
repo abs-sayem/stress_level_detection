@@ -60,10 +60,13 @@
         - SVM           : 64%
         - Random Forest : 71%
     - Classification Report:
+
     ![Classification Report](images/feature_ds/svm_random_forest_cr.PNG)
 
     - Confussion Matrix:
+
     ![Confussion Matrix](images/feature_ds/svm_random_forest_cm.png)
+
 - #### **CNN Model:** (StressCNN)
     - Input Layer: accept 1d signals as input
     - Two Convolutional Layers: `Conv1d` layers with 32 and 64 filters respectively, a kernel size of 3, and padding of 1, followed by a ReLU activation function.
@@ -73,6 +76,20 @@
     - Output Layer: A Linear layer with 9 neurons (matching the number of classes).
 
         ![StressCNN Architecture](images/stress_cnn_architecture.PNG)
+
+    - Final Accuracy: 75%
+
+    - Accuracy vs Loss Curve:
+
+    ![Accuracy vs Loss Curve](images/feature_ds/stresscnn_loss_acc_curves.png)
+
+    - Classification Report:
+
+    ![Classification Report](images/feature_ds/stresscnn_loss_cr.png)
+
+    - Confussion Matrix:
+
+    ![Confussion Matrix](images/feature_ds/stresscnn_loss_cm.png)
 
 - #### **Proposed Model:** (LSTM+CNN)
     - Input Layer: Accepts 1D sequential data with a specified number of features (input_dim).
