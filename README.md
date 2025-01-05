@@ -72,7 +72,7 @@
 
     - Confussion Matrices:
 
-    ![Confussion Matrix](images/feature_ds/svm_random_forest_cm.png)
+    ![Confussion Matrix](images/feature_ds/svc_random_forest_cm.png)
 
 - #### **CNN Model:** (StressCNN)
     - Input Layer: accept 1d signals as input
