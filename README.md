@@ -49,7 +49,7 @@
     ![Emotion to Stress Level](images/emotion_to_stress.jpg)
 
 **Final Feature Dataset:**
-- I then apply one of the statistic methods `Anova F-Statistic` to check the importance of the feature.
+- I then apply one of the statistic methods `Anova F-Statistic` to check the importance of the features extracted before.
     
     **Anova Feature Importance**
 
@@ -159,6 +159,15 @@
         ![Classification Report and Confussion Matrix](images/audio_ds/lstmcnn_cr_cm.png)
 
 ## **Approach-3: Train Models on Audio + Feature Dataset**
+- Here we combine **Audio + Corresponding Text + Features** to train our models to ensure no information is missed and including text is for a test if it makes any deffenence.
+- **Why use Tf-Idf Vectorizer?**
+    - Tf-Idf is the best suited for sentiment analysis because it considers not just the presence of a word but also its significance within a document and across the corpus. Common words like "the," "and," or "is" get lower weights that reduces their impact on the model.
+    - Also, it is memory-efficient, Suitable for models like - SVM, performs well with smaller datasets and computationally cheaper.
+
+    - **When to Use TF-IDF vs. Alternatives**
+
+        ![TF-IDF vs. Alternatives](images/why_tfidf_vertorizer.png)
+
 - #### **ML Model:** SVM and Random Forest
 
     - Final Accuracy:
