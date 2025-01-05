@@ -84,7 +84,7 @@
 
         ![StressCNN Architecture](images/stress_cnn_architecture.PNG)
 
-    - Final Accuracy: 75%
+    - Final Accuracy: 78%
 
     - Accuracy vs Loss Curve:
 
@@ -105,7 +105,7 @@
 
         ![LSTM_CNN Architecture](images/lstmcnn_model_architecture.png)
 
-    - Final Accuracy: 77%
+    - Final Accuracy: 78%
 
     - Accuracy vs Loss Curve:
 
@@ -137,7 +137,7 @@
         ![Confussion Matrix](images/audio_ds/svc_random_forest_cm.png)
 
 - #### **CNN Model:** (StressCNN)
-    - Final Accuracy: 99%
+    - Final Accuracy: 99.26%
 
     - Accuracy vs Loss Curve:
 
@@ -148,7 +148,7 @@
         ![Classification Report and Confussion Matrix](images/audio_ds/stresscnn_cr_cm.png)
 
 - #### **Proposed Model:** (LSTM+CNN)
-    - Final Accuracy: 99%
+    - Final Accuracy: 99.36%
 
     - Accuracy vs Loss Curve:
 
@@ -183,7 +183,7 @@
         ![Confussion Matrix](images/audio_feature_ds/svc_random_forest_cm.png)
 
 - #### **CNN Model:** (StressCNN)
-    - Final Accuracy: 98%
+    - Final Accuracy: 99%
 
     - Accuracy vs Loss Curve:
 
@@ -194,7 +194,7 @@
         ![Classification Report and Confussion Matrix](images/audio_feature_ds/stresscnn_cr_cm.png)
 
 - #### **Proposed Model:** (LSTM+CNN)
-    - Final Accuracy: 98%
+    - Final Accuracy: 97%
 
     - Accuracy vs Loss Curve:
 
