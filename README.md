@@ -103,7 +103,7 @@
     - Dropout Layer: A dropout layer with a 0.5 rate to reduce overfitting.
     - Output Layer: A Linear layer with num_classes neurons, producing the final output.
 
-        ![LSTM_CNN Architecture](images/lstm_cnn_architecture.png)
+        ![LSTM_CNN Architecture](images/lstmcnn_model_architecture.png)
 
     - Final Accuracy: 77%
 
