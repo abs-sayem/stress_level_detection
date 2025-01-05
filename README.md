@@ -31,12 +31,10 @@
 - Each emotion is expressed using 200 target words, producing emotionally rich and semantically neutral utterances.
 - The recordings are provided in 16-bit WAV format with a sampling rate of 44.1 kHz, ensures high audio quality suitable for acoustic analysis.
 ### **Making of Feature Dataset**
-- Essential Features for Stress Detection:
-    - Prosodic Features: Pitch, Energy / Intensity
-    - Spectral Features: Mel-Frequency Cepstral Coefficients (MFCCs), Spectral Centroid, Spectral Flux, Spectral Bandwidth, Spectral Roll-Off
-    - Voice Quality Features: Harmonics-to-Noise Ratio (HNR), Formants (F1, F2, F3)
-    - Temporal Features: Frequency, Speech Rate
-    - Derived Features: Chroma
+- **Essential Features for Stress Detection:**
+
+    ![Essential Features](images/essential_features.png)
+
 - For comparison with cnn and proposed (lstm+cnn) model a feature dataset is needed for traditional machile learning models. This dataset is used to train all the models for one of out three sections of comparison.
 - `librosa` and `parselmouth` both are python libraries used to extract features from audio file.
     - librosa extracted features like - Pitch, Intensity, Frequency, Amplitude, MFCCs, Spectral - (Centroid, Bandwidth, Rolloff, Flux), Energy, ZCR, Tempo, Formants.
