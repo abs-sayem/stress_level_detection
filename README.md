@@ -48,7 +48,16 @@
 
     ![Emotion to Stress Level](images/emotion_to_stress.jpg)
 
-    **Final Feature Dataset**
+**Final Feature Dataset:**
+- I then apply one of the statistic methods `Anova F-Statistic` to check the importance of the feature.
+    
+    **Anova Feature Importance**
+
+    ![Anova Feature Importance](images/feature_selection_anova_f-stat.png)
+
+- I then select 8 top features that have importance value over 40. And ensures that the essential features are also in the top list of the Anona method.
+
+    **Final Training Dataset**
 
     ![Final Dataset for Training](images/final_features_for_train.jpg)
 
