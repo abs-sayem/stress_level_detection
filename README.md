@@ -160,6 +160,7 @@
 
 ## **Approach-3: Train Models on Audio + Feature Dataset**
 - Here we combine **Audio + Corresponding Text + Features** to train our models to ensure no information is missed and including text is for a test if it makes any deffenence.
+- Then I use Tf-Idf vectorization to extract features from text and includes those features to the feature dataset.
 - **Why use Tf-Idf Vectorizer?**
     - Tf-Idf is the best suited for sentiment analysis because it considers not just the presence of a word but also its significance within a document and across the corpus. Common words like "the," "and," or "is" get lower weights that reduces their impact on the model.
     - Also, it is memory-efficient, Suitable for models like - SVM, performs well with smaller datasets and computationally cheaper.
