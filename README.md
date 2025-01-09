@@ -205,6 +205,25 @@
 
         ![Classification Report and Confussion Matrix](images/audio_feature_ds/lstmcnn_cr_cm.png)
 
+    **(CNN+LSTM) Model with Cross Validation**
+    
+    - Final Accuracy: 99.01%
+
+    - Accuracy vs Loss Curve:
+
+        ![Accuracy vs Loss Curve](images/audio_feature_ds/audiostresscnn_loss_accuracy_curve.png)
+
+    - Classification Report and Confussion Matrix:
+
+        ![Classification Report and Confussion Matrix](images/audio_feature_ds/audiostresscnn_cr_cm.png)
+
+
+- #### **Testing (CNN+LSTM) Model**
+
+- On unseen data:
+
+        ![testing](images/test/audiostresscnn_test_result.PNG)
+
 - ### **Overall Findings Comparison**
     
     ![Overall Comparison](images/overall_result_comparison.PNG)
