@@ -222,7 +222,7 @@
 
 - On unseen data:
 
-        ![testing](images/test/audiostresscnn_test_result.PNG)
+    ![testing](images/test/audiostresscnn_test_result.PNG)
 
 - ### **Overall Findings Comparison**
     
